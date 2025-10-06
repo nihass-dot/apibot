@@ -1,0 +1,55 @@
+# API Monitoring Dashboard
+
+A comprehensive dashboard for monitoring API performance, resource utilization, and predictive maintenance with integrated LLM-powered analysis and visualization capabilities.
+
+## Features
+
+- **Multi-Source Data Analysis**: Visualize data from Consumer Behavior, Resource Optimization, and Predictive Maintenance reports
+- **Interactive Visualizations**: Generate bar charts, pie charts, scatter plots, boxplots, histograms, and heatmaps
+- **LLM-Powered Insights**: Ask natural language questions about your data and receive intelligent responses
+- **Dynamic Plot Generation**: Request custom visualizations through natural language or UI controls
+- **Real-time Data Fetching**: Connects to Supabase for up-to-date data
+
+## Screenshots
+
+[Add screenshots of your dashboard here]
+
+## Prerequisites
+
+- Python 3.8+
+- Ollama installed and running
+- Supabase account and project
+
+## Installation
+# API Monitoring Dashboard
+
+A comprehensive dashboard for monitoring API performance, resource utilization, and predictive maintenance with integrated LLM-powered analysis and visualization capabilities.
+
+## Features
+
+- **Multi-Source Data Analysis**: Visualize data from Consumer Behavior, Resource Optimization, and Predictive Maintenance reports
+- **Interactive Visualizations**: Generate bar charts, pie charts, scatter plots, boxplots, histograms, and heatmaps
+- **LLM-Powered Insights**: Ask natural language questions about your data and receive intelligent responses
+- **Dynamic Plot Generation**: Request custom visualizations through natural language or UI controls
+- **Real-time Data Fetching**: Connects to Supabase for up-to-date data
+
+## Screenshots
+
+[Add screenshots of your dashboard here]
+
+## Prerequisites
+
+- Python 3.8+
+- Ollama installed and running
+- Supabase account and project
+
+## Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/api-dashboard.git
+   cd api-dashboard
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/api-dashboard.git
+   cd api-dashboard
