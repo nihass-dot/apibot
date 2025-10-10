@@ -229,3 +229,34 @@ def plot_all_relevant_charts(df: pd.DataFrame, display_name: str):
             fig = px.bar(plot_df, x='uri_path', y='prediction_score', 
                          title='Top 15 APIs by Anomaly Prediction Score')
             st.plotly_chart(fig, use_container_width=True)
+    
+    elif "Preprocessed API" in display_name:
+        st.subheader("Preprocessed API Traffic Overview")
+
+    # Convert latency column to numeric
+    if 'time_to_serve_request' in df.columns:
+        df['time_to_serve_request'] = pd.to_numeric(df['time_to_serve_request'], errors='coerce')
+
+    # Plot total requests over time
+    if 'timestamp' in df.columns and 'total_requests' in df.columns:
+        time_df = df.sort_values('timestamp')
+        fig = px.line(time_df, x='timestamp', y='total_requests', color='api_name',
+                      title='API Traffic Over Time')
+        st.plotly_chart(fig, use_container_width=True)
+
+    # Average latency per API
+    if 'api_name' in df.columns and 'time_to_serve_request' in df.columns:
+        avg_latency_df = df.groupby('api_name', as_index=False)['time_to_serve_request'].mean()
+        fig = px.bar(avg_latency_df, x='api_name', y='time_to_serve_request',
+                     title='Average Latency per API')
+        st.plotly_chart(fig, use_container_width=True)
+
+    # Success rate distribution
+    if 'success_rate' in df.columns:
+        fig = px.histogram(df, x='success_rate', nbins=20, title='Success Rate Distribution')
+        st.plotly_chart(fig, use_container_width=True)
+
+    # Requests by hour of day
+    if 'hour' in df.columns:
+        fig = px.histogram(df, x='hour', title='Request Distribution by Hour of Day')
+        st.plotly_chart(fig, use_container_width=True)
